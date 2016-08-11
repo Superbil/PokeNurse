@@ -2,6 +2,7 @@ import React from 'react'
 import renderModal from '../../Detail'
 
 const Pokemon = React.createClass({
+
   render () {
     let {species} = this.props
 
@@ -11,11 +12,11 @@ const Pokemon = React.createClass({
           <table className='table table-condensed table-hover'>
             <thead>
               <tr>
-                <th></th>
-                <th>
+                <th width="5%"><input type="checkbox" /></th>
+                <th width="5%">
                   <span className='glyphicon glyphicon-star favorite-yellow'></span>
                 </th>
-                <th>
+                <th width="15%">
                   Name
                 </th>
                 <th>
@@ -50,7 +51,7 @@ const Pokemon = React.createClass({
             <input
               type='checkbox'
               value={String(pokemon.id)}
-              disabled={pokemon.deployed}
+              disabled={pokemon.deployed || pokemon.favorite}
             />
           </td>
           <td>
