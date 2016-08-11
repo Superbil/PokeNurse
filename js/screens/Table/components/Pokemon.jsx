@@ -7,7 +7,7 @@ const Pokemon = React.createClass({
 
     return (
       <tr className='child' key={'sub' + species.pokemon_id}>
-        <td colSpan='6'>
+        <td colSpan='7'>
           <table className='table table-condensed table-hover'>
             <thead>
               <tr>
